@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TV Strategy Scraper</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="logo-container">
+                <div class="logo-icon">TV</div>
+                <h1>Strategy Scraper</h1>
+            </div>
+            <p class="subtitle">Extract backtest data instantly</p>
+        </header>
+
+        <main>
+            <div class="status-card" id="statusCard">
+                <div class="pulse-icon"></div>
+                <span id="statusText">Ready to scrape</span>
+            </div>
+
+            <div class="button-group">
+                <button id="scrapeSummary" class="btn primary">
+                    <span class="icon">📊</span> Scrape Summary
+                </button>
+                <button id="scrapeTrades" class="btn secondary">
+                    <span class="icon">📜</span> Scrape Trade List
+                </button>
+            </div>
+
+            <div id="resultsArea" class="results-area hidden">
+                <div class="divider"></div>
+                <h3>Export Options</h3>
+                <div class="export-grid">
+                    <button id="copyBtn" class="export-btn">
+                        <span class="icon">📋</span> Copy CSV
+                    </button>
+                    <button id="downloadCsv" class="export-btn">
+                        <span class="icon">📥</span> Save CSV
+                    </button>
+                    <button id="downloadJson" class="export-btn">
+                        <span class="icon">🧱</span> Save JSON
+                    </button>
+                </div>
+            </div>
+        </main>
+
+        <footer>
+            <p>Make sure the Strategy Report panel is open.</p>
+        </footer>
+    </div>
+    <script src="popup.js"></script>
+</body>
+</html>
